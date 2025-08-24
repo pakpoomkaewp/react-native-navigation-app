@@ -44,6 +44,8 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    // When using flexDirection: 'row', alignItems: 'center' ensures text elements with different heights are vertically centered
+    alignItems: 'center',
     borderWidth: 1,
     borderColor: '#eee',
   },

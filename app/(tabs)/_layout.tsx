@@ -37,6 +37,15 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="settings" // This corresponds to settings.tsx
+        options={{
+          title: 'Settings',
+          tabBarIcon: ({ color, focused }) => (
+            <IconSymbol name={focused ? 'gear.circle.fill' : 'gear.circle'} color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }

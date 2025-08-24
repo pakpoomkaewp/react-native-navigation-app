@@ -1,4 +1,5 @@
-import { FlatList, StyleSheet, Text, View } from 'react-native';
+import { Link } from 'expo-router';
+import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 // Dummy data for accounts
 const DUMMY_ACCOUNTS = [
@@ -16,10 +17,26 @@ export default function HomeScreen() {
         data={DUMMY_ACCOUNTS}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <View style={styles.accountItem}>
-            <Text style={styles.accountName}>{item.name}</Text>
-            <Text style={styles.accountBalance}>${item.balance.toFixed(2)}</Text>
-          </View>
+          <Link
+            // Use the filename as the pathname to specify the template
+            href={{
+              pathname: '/[account]',
+              // Provide values for the dynamic parts and any other params
+              params: {
+                account: item.id, // This fills the [account] part of the URL
+                accountName: item.name,
+                accountBalance: item.balance.toFixed(2),
+              },
+            }}
+            asChild // This makes the Link use the child View as the touchable area
+          >
+            <TouchableOpacity>
+              <View style={styles.accountItem}>
+                <Text style={styles.accountName}>{item.name}</Text>
+                <Text style={styles.accountBalance}>${item.balance.toFixed(2)}</Text>
+              </View>
+            </TouchableOpacity>
+          </Link>
         )}
       />
     </View>

@@ -14,6 +14,7 @@ export default function HomeScreen() {
       <Text style={styles.title}>My Accounts</Text>
       <FlatList
         data={DUMMY_ACCOUNTS}
+        keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <View style={styles.accountItem}>
             <Text style={styles.accountName}>{item.name}</Text>

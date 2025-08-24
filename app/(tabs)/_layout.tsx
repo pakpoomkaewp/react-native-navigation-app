@@ -25,7 +25,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="addAccount"
+        name="addAccount" // This corresponds to addAccount.tsx
         options={{
           title: 'Add Account',
           tabBarIcon: ({ color, focused }) => (

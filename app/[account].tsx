@@ -1,4 +1,4 @@
-import { useLocalSearchParams } from 'expo-router';
+import { Stack, useLocalSearchParams } from 'expo-router';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function AccountDetailScreen() {
@@ -7,6 +7,8 @@ export default function AccountDetailScreen() {
 
   return (
     <View style={styles.container}>
+      {/* Provide a nice header with a title and back button */}
+      <Stack.Screen options={{ title: 'Account Details' }} />
       <Text style={styles.title}>Account: {accountName}</Text>
       <Text style={styles.balance}>Current Balance: {accountBalance}</Text>
     </View>

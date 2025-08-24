@@ -5,7 +5,7 @@ const DUMMY_ACCOUNTS = [
   { id: '1', name: 'Savings Account', balance: 5250.75 },
   { id: '2', name: 'Checking Account', balance: 1234.56 },
   { id: '3', name: 'Credit Card', balance: -876.21 },
-  { id: '4', name: 'Investment Portfolio', balance: 15400.0 },
+  { id: '4', name: 'Investment Portfolio', balance: 15400.00 },
 ];
 
 export default function HomeScreen() {

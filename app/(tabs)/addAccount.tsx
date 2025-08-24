@@ -8,7 +8,7 @@ export default function AddAccountScreen() {
       <TextInput style={styles.input} placeholder="Initial Balance" keyboardType="numeric" />
       <Button
         title="Save Account"
-        onPress={() => Alert.alert('Account Added!', 'This is where you would save the data.')}
+        onPress={() => Alert.alert('Account Saved!', 'This is where you would save the data.')}
       />
     </View>
   );
